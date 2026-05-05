@@ -14,8 +14,8 @@
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"doQumentation","applicationCategory":"EducationalApplication","operatingSystem":"Web, Docker, Raspberry Pi","description":"Open-source frontend for IBM Quantum documentation with live Jupyter code execution, simulator mode, and offline support.","url":"https://doqumentation.org","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"license":"https://www.apache.org/licenses/LICENSE-2.0"}</script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
 <script src="https://unpkg.com/thebelab@0.4.0/lib/index.js" async></script><link rel="stylesheet" href="/assets/css/styles.171a766f.css">
-<script src="/assets/js/runtime~main.27b267f3.js" defer="defer"></script>
-<script src="/assets/js/main.3c651484.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.0cda2252.js" defer="defer"></script>
+<script src="/assets/js/main.a91d4d33.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
 <svg style="display: none;"><defs>
@@ -35,6 +35,14 @@
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="what-this-project-adds">Lo que este proyecto añade<a href="#what-this-project-adds" class="hash-link" aria-label="Enlace directo al Lo que este proyecto añade" title="Enlace directo al Lo que este proyecto añade" translate="no">​</a></h2>
 <p>La <a href="https://github.com/Qiskit/documentation" target="_blank" rel="noopener noreferrer" class="">documentación de Qiskit</a> de IBM es de código abierto (CC BY-SA 4.0), pero su aplicación web no lo es. doQumentation añade un frontend de código abierto con ejecución de código en vivo, inyección automática de credenciales y modo simulador.</p>
 <p>Desplegable en cualquier lugar: desde <a href="https://doqumentation.org" target="_blank" rel="noopener noreferrer" class="">GitHub Pages</a> hasta <a href="https://github.com/JanLahmann/doQumentation/pkgs/container/doqumentation" target="_blank" rel="noopener noreferrer" class="">Docker</a> y <a href="https://rasqberry.org/" target="_blank" rel="noopener noreferrer" class="">RasQberry</a>. Vea <a class="" href="/features">todas las funciones</a>.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="when-youre-ready-for-more">Cuando estés listo para más<a href="#when-youre-ready-for-more" class="hash-link" aria-label="Enlace directo al Cuando estés listo para más" title="Enlace directo al Cuando estés listo para más" translate="no">​</a></h2>
+<p>doQumentation te ayuda a dar tus <strong>primeros pasos con Qiskit</strong> — leer, ejecutar código y explorar — sin necesidad de instalar nada. A medida que avances, dirígete a la plataforma oficial de IBM:</p>
+<ul>
+<li class=""><strong>Ejecuta en hardware real</strong> — crea una <a href="https://quantum.cloud.ibm.com/registration" target="_blank" rel="noopener noreferrer" class="">cuenta de IBM Cloud</a> gratuita y una instancia Open Plan para ejecutar circuitos en computadoras cuánticas reales.</li>
+<li class=""><strong>Contenido más reciente</strong> — la <a href="https://quantum.cloud.ibm.com/learning" target="_blank" rel="noopener noreferrer" class="">plataforma de aprendizaje Qiskit</a> de IBM tiene los cursos, tutoriales y novedades más recientes (algunos pueden no estar todavía en doQumentation).</li>
+<li class=""><strong>Desarrolla localmente</strong> — <a href="https://docs.quantum.ibm.com/guides/install-qiskit" target="_blank" rel="noopener noreferrer" class="">instala Qiskit</a> en tu propio portátil para trabajos de desarrollo serios.</li>
+</ul>
+<p><em>Construido sobre la <a href="https://github.com/Qiskit/documentation" target="_blank" rel="noopener noreferrer" class="">documentación de código abierto de IBM Quantum</a>. Gracias al equipo de IBM Quantum por hacer este contenido libremente disponible bajo CC BY-SA 4.0.</em></p>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="getting-started">Primeros pasos<a href="#getting-started" class="hash-link" aria-label="Enlace directo al Primeros pasos" title="Enlace directo al Primeros pasos" translate="no">​</a></h2>
 <!-- -->
 <!-- -->
@@ -57,7 +65,7 @@
 <li class=""><strong>IBM Code Engine</strong> — Jupyter serverless en su cuenta de IBM Cloud. Arranque en frío en segundos en lugar de minutos. <a class="" href="/jupyter-settings#code-engine">Configurar</a></li>
 <li class=""><strong>Jupyter Local (Docker / RasQberry)</strong> — Se conecta al servidor Jupyter local con Qiskit preinstalado</li>
 <li class=""><strong>Servidor personalizado</strong> — Apunte a cualquier endpoint Jupyter en <a class="" href="/jupyter-settings#advanced">Configuración</a></li>
-</ol><p>Cuando hay múltiples backends disponibles, elija cuál usar desde <a class="" href="/jupyter-settings#backend-selection">Configuración</a>.</p></div></div></details>
+</ol><p><strong>No IBM Quantum account?</strong> Enable <a href="/jupyter-settings#execution-mode">Simulator Mode</a> in Settings to run all code without signing up.</p><p>Cuando hay múltiples backends disponibles, elija cu ál usar desde <a class="" href="/jupyter-settings#backend-selection">Configuración</a>.</p></div></div></details>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed="true"><summary>Opciones de despliegue</summary><div><div class="collapsibleContent_i85q"><p>doQumentation está disponible como:</p><ul>
 <li class=""><strong><a href="https://doqumentation.org" target="_blank" rel="noopener noreferrer" class="">GitHub Pages</a></strong> — Sitio estático con <a href="https://mybinder.org" target="_blank" rel="noopener noreferrer" class="">Binder</a> o <a class="" href="/jupyter-settings#code-engine">IBM Code Engine</a> para ejecución de código remota</li>
 <li class=""><strong><a href="https://github.com/JanLahmann/doQumentation/pkgs/container/doqumentation" target="_blank" rel="noopener noreferrer" class="">Docker</a></strong> — Stack completo localmente, capaz de funcionar sin conexión</li>
