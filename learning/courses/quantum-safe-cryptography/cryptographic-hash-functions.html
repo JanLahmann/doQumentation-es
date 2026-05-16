@@ -14,8 +14,8 @@
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"doQumentation","applicationCategory":"EducationalApplication","operatingSystem":"Web, Docker, Raspberry Pi","description":"Open-source frontend for IBM Quantum documentation with live Jupyter code execution, simulator mode, and offline support.","url":"https://doqumentation.org","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"license":"https://www.apache.org/licenses/LICENSE-2.0"}</script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
 <script src="https://unpkg.com/thebelab@0.4.0/lib/index.js" async></script><link rel="stylesheet" href="/assets/css/styles.09715444.css">
-<script src="/assets/js/runtime~main.e2f2fde3.js" defer="defer"></script>
-<script src="/assets/js/main.8a13d891.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.7c936f93.js" defer="defer"></script>
+<script src="/assets/js/main.97e91ea4.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
 <svg style="display: none;"><defs>
@@ -47,6 +47,8 @@
 <li class=""><strong>Irreversibilidad:</strong> Una CHF es una <abbr title="Una función matemática que es relativamente fácil de calcular en una dirección pero extremadamente difícil de revertir." style="text-decoration:underline dotted;text-underline-offset:2px;cursor:help"><em>función unidireccional</em></abbr>: a partir de un digest dado, debe ser prácticamente imposible revertir el hashing y reconstruir la entrada.</li>
 <li class=""><strong>Inyectividad aproximada:</strong> Aunque las CHF son funciones de muchos a uno, deben comportarse como funciones de uno a uno. Esto se logra mediante un conjunto de salida enormemente grande combinado con el efecto avalancha, donde pequeños cambios en la entrada producen digests muy diferentes. Esta propiedad se denomina inyectividad aproximada.</li>
 </ol>
+<p><img decoding="async" loading="lazy" alt="Fig 2: Digital signatures" src="/assets/images/digital-signature-f30b9f1a727ed5ce7e5c45f780a514fe.svg" width="1259" height="523" class="img_ev3q"></p>
+<p><img decoding="async" loading="lazy" alt="Fig 1: Secure hashing for data integrity checks" src="/assets/images/data-integrity-89f9ea689b46a867d9b3f39648f50cba.svg" width="983" height="445" class="img_ev3q"></p>
 <p>Sobre esta base, un dato puede validarse contra la versión original comparando un digest de los datos con un digest del original.</p>
 <ul>
 <li class="">Si los dos digests coinciden, se puede suponer con alta probabilidad que los datos son idénticos al original.</li>

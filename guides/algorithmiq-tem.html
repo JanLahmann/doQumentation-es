@@ -14,8 +14,8 @@
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"doQumentation","applicationCategory":"EducationalApplication","operatingSystem":"Web, Docker, Raspberry Pi","description":"Open-source frontend for IBM Quantum documentation with live Jupyter code execution, simulator mode, and offline support.","url":"https://doqumentation.org","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"license":"https://www.apache.org/licenses/LICENSE-2.0"}</script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
 <script src="https://unpkg.com/thebelab@0.4.0/lib/index.js" async></script><link rel="stylesheet" href="/assets/css/styles.09715444.css">
-<script src="/assets/js/runtime~main.e2f2fde3.js" defer="defer"></script>
-<script src="/assets/js/main.8a13d891.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.7c936f93.js" defer="defer"></script>
+<script src="/assets/js/main.97e91ea4.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
 <svg style="display: none;"><defs>
@@ -42,6 +42,10 @@ et al. (2024), <a href="https://arxiv.org/abs/2403.13542" target="_blank" rel="n
 <li class=""><strong>Mitigación de errores de lectura</strong>: La función TEM de Qiskit también incluye un <a href="https://journals.aps.org/prresearch/abstract/10.1103/PhysRevResearch.5.033154" target="_blank" rel="noopener noreferrer" class="">método propietario de mitigación de errores de lectura</a> capaz de reducir significativamente los errores de lectura después de una breve ejecución de calibración.</li>
 <li class=""><strong>Precisión</strong>: TEM mejora significativamente la precisión y fiabilidad de las simulaciones cuánticas digitales, haciendo los algoritmos cuánticos más precisos y confiables.</li>
 </ol>
+<ul>
+<li class=""><a href="https://quantum.ibm.com/functions?id=4b1b9d76-c18b-4788-b70b-15125111fbe6" target="_blank" rel="noopener noreferrer" class="">Request access to Algorithmiq Tensor-network error mitigation</a>.
+<em>See the <a href="https://docs.quantum.ibm.com/api/functions/algorithmiq-tem" target="_blank" rel="noopener noreferrer" class="">API reference</a></em></li>
+</ul>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="description">Descripción<a href="#description" class="hash-link" aria-label="Enlace directo al Descripción" title="Enlace directo al Descripción" translate="no">​</a></h2>
 <p>La función TEM permite obtener valores esperados mitigados para múltiples observables en un circuito cuántico con un costo de muestreo mínimo. El circuito se mide con una medida de operador con valor positivo informacionalmente completa (IC-POVM), y los resultados de medición recolectados se procesan en un computador clásico. Esta medición se usa para realizar los métodos de redes tensoriales y construir un mapa de inversión de ruido. La función aplica un mapa que invierte completamente todo el circuito ruidoso usando redes tensoriales para representar las capas ruidosas.</p>
 <p><img decoding="async" loading="lazy" alt="Esquema de TEM" src="/assets/images/tem_scheme-3b0ce8de48d658c8be50eca1107670ae.svg" title="Estimación mitigada de errores de un observable O mediante el posprocesamiento de resultados de medición del procesador cuántico ruidoso. U y N denotan una operación cuántica ideal y el mapa de ruido asociado, que puede ser generalmente no local (y extendido a las cajas grises). D representa un tensor de operadores que son duales a los efectos en la medición IC. El módulo de mitigación de ruido M es una red tensorial que se contrae eficientemente desde el medio hacia afuera. La primera iteración de la contracción se representa con la línea punteada púrpura, la segunda con la línea discontinua, y la tercera con la línea sólida." width="985" height="562" class="img_ev3q"></p>
