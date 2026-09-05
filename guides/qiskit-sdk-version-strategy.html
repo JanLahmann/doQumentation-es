@@ -15,8 +15,8 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
 <script src="https://unpkg.com/thebelab@0.4.0/lib/index.js" async></script>
 <script src="https://cloud.umami.is/script.js" defer="defer" data-website-id="97f347ac-e7ba-4be3-b26f-ab4b328bdbf2" data-domains="doqumentation.org"></script><link rel="stylesheet" href="/assets/css/styles.e55021e4.css">
-<script src="/assets/js/runtime~main.11c2e55c.js" defer="defer"></script>
-<script src="/assets/js/main.8baccf5c.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.37d58ff9.js" defer="defer"></script>
+<script src="/assets/js/main.bd63ddf0.js" defer="defer"></script>
 <link data-rh-hreflang rel="alternate" hreflang="en" href="https://doqumentation.org/guides/qiskit-sdk-version-strategy" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://de.doqumentation.org/guides/qiskit-sdk-version-strategy" /><link data-rh-hreflang rel="alternate" hreflang="es" href="https://es.doqumentation.org/guides/qiskit-sdk-version-strategy" /><link data-rh-hreflang rel="alternate" hreflang="fr" href="https://fr.doqumentation.org/guides/qiskit-sdk-version-strategy" /><link data-rh-hreflang rel="alternate" hreflang="it" href="https://it.doqumentation.org/guides/qiskit-sdk-version-strategy" /><link data-rh-hreflang rel="alternate" hreflang="pt" href="https://pt.doqumentation.org/guides/qiskit-sdk-version-strategy" /><link data-rh-hreflang rel="alternate" hreflang="ja" href="https://ja.doqumentation.org/guides/qiskit-sdk-version-strategy" /><link data-rh-hreflang rel="alternate" hreflang="fil" href="https://tl.doqumentation.org/guides/qiskit-sdk-version-strategy" /><link data-rh-hreflang rel="alternate" hreflang="ar" href="https://ar.doqumentation.org/guides/qiskit-sdk-version-strategy" /><link data-rh-hreflang rel="alternate" hreflang="he" href="https://he.doqumentation.org/guides/qiskit-sdk-version-strategy" /><link data-rh-hreflang rel="alternate" hreflang="ms" href="https://ms.doqumentation.org/guides/qiskit-sdk-version-strategy" /><link data-rh-hreflang rel="alternate" hreflang="id" href="https://id.doqumentation.org/guides/qiskit-sdk-version-strategy" /><link data-rh-hreflang rel="alternate" hreflang="th" href="https://th.doqumentation.org/guides/qiskit-sdk-version-strategy" /><link data-rh-hreflang rel="alternate" hreflang="ko" href="https://ko.doqumentation.org/guides/qiskit-sdk-version-strategy" /><link data-rh-hreflang rel="alternate" hreflang="pl" href="https://pl.doqumentation.org/guides/qiskit-sdk-version-strategy" /><link data-rh-hreflang rel="alternate" hreflang="ro" href="https://ro.doqumentation.org/guides/qiskit-sdk-version-strategy" /><link data-rh-hreflang rel="alternate" hreflang="uk" href="https://uk.doqumentation.org/guides/qiskit-sdk-version-strategy" /><link data-rh-hreflang rel="alternate" hreflang="cs" href="https://cs.doqumentation.org/guides/qiskit-sdk-version-strategy" /><link data-rh-hreflang rel="alternate" hreflang="swg" href="https://swg.doqumentation.org/guides/qiskit-sdk-version-strategy" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://bad.doqumentation.org/guides/qiskit-sdk-version-strategy" /><link data-rh-hreflang rel="alternate" hreflang="bar" href="https://bar.doqumentation.org/guides/qiskit-sdk-version-strategy" /><link data-rh-hreflang rel="alternate" hreflang="ksh" href="https://ksh.doqumentation.org/guides/qiskit-sdk-version-strategy" /><link data-rh-hreflang rel="alternate" hreflang="nds" href="https://nds.doqumentation.org/guides/qiskit-sdk-version-strategy" /><link data-rh-hreflang rel="alternate" hreflang="gsw" href="https://gsw.doqumentation.org/guides/qiskit-sdk-version-strategy" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://sax.doqumentation.org/guides/qiskit-sdk-version-strategy" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://bln.doqumentation.org/guides/qiskit-sdk-version-strategy" /><link data-rh-hreflang rel="alternate" hreflang="de-AT" href="https://aut.doqumentation.org/guides/qiskit-sdk-version-strategy" /><link data-rh-hreflang rel="alternate" hreflang="x-default" href="https://doqumentation.org/guides/qiskit-sdk-version-strategy" /></head>
 <body>
 <svg style="display: none;"><defs>
@@ -32,7 +32,7 @@ versión de parche.</p>
 <p>Los cambios de API que rompen la compatibilidad se reservan para lanzamientos de versiones
 mayores. El período <strong>mínimo</strong> entre lanzamientos de versiones mayores es de un año. Las
 versiones menores introducen nuevas funcionalidades y correcciones de errores sin romper la
-compatibilidad de la API, y se publican periódicamente (actualmente cada tres meses)
+compatibilidad de la API, y se publican periódicamente (actualmente, aproximadamente cada tres meses)
 <strong>únicamente</strong> para la versión mayor actual. Las versiones de parche proporcionan
 correcciones de errores identificados en la versión menor más reciente de cada serie de
 lanzamientos activamente soportada (es decir, la versión mayor). Se soportan como máximo
@@ -40,8 +40,8 @@ dos series de lanzamientos a la vez, lo cual ocurre únicamente durante el perí
 solapamiento que sigue a un nuevo lanzamiento de versión mayor, como se describe con más
 detalle a continuación.</p>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="release-schedule">Calendario de lanzamientos<a href="#release-schedule" class="hash-link" aria-label="Enlace directo al Calendario de lanzamientos" title="Enlace directo al Calendario de lanzamientos" translate="no">​</a></h2>
-<p>A continuación se incluye un calendario de lanzamientos tentativo:</p>
-<p><img decoding="async" loading="lazy" alt="Calendario de lanzamientos tentativo de Qiskit" src="/assets/images/release_schedule-1773ed2741facc7656f68e0351ed74ec.avif" width="1048" height="360" class="img_ev3q"></p>
+<p>Ejemplo de cadencia de una versión principal X:</p>
+<p><img decoding="async" loading="lazy" alt="Qiskit release schedule schema" src="/assets/images/release_schedule-1773ed2741facc7656f68e0351ed74ec.avif" width="1048" height="360" class="img_ev3q"></p>
 <p>Para obtener un calendario de lanzamientos actualizado, consulta la <a href="https://github.com/Qiskit/qiskit/milestones" target="_blank" rel="noopener noreferrer" class="">lista de hitos</a> del proyecto GitHub de Qiskit, que siempre contendrá el plan de lanzamiento actual.</p>
 <p>Con el lanzamiento de una nueva versión mayor, la versión mayor anterior recibe soporte
 durante al menos seis meses con solo correcciones de errores, y un año para correcciones
@@ -89,11 +89,10 @@ antes de una nueva versión mayor, se publicará una versión menor final. Este 
 lanzamiento de versión menor <code>X.Y+1.0.0</code> es equivalente a <code>X.Y.0</code> pero con advertencias y
 deprecaciones para cualquier cambio de API que se realice en la nueva serie de versiones
 mayores.</p>
-<p>Por ejemplo, inmediatamente antes del lanzamiento de la versión 1.0.0, se publicará la
-versión 0.46.0. El lanzamiento 0.46.0 será equivalente al lanzamiento 0.45.0 pero con
-advertencias de deprecación adicionales que documentan los cambios de API realizados como
-parte del lanzamiento 1.0.0. Este patrón se utilizará para cualquier futuro lanzamiento de
-versión mayor.</p>
+<p>Por ejemplo, inmediatamente antes del lanzamiento de la versión 1.0.0, se
+pública la versión 0.46.0. El lanzamiento 0.46.0 es
+equivalente al lanzamiento 0.45.0 pero con advertencias de deprecación adicionales que documentan los cambios de API realizados como
+parte del lanzamiento 1.0.0. Este patrón aplica a cualquier lanzamiento de versión mayor.</p>
 <p>Los usuarios de Qiskit deben primero actualizar a esta versión menor final para ver
 cualquier advertencia de deprecación y ajustar su uso de Qiskit antes de intentar un
 lanzamiento que puede ser incompatible. La versión mayor anterior tendrá soporte durante
@@ -126,8 +125,8 @@ prospectivo.</p>
 <p>Ten en cuenta que cuando se publican uno de los sufijos de versión previa al lanzamiento de
 PEP440 (como <code>a</code>, <code>b</code> o <code>pre</code>), este no tiene las mismas garantías que un lanzamiento <code>rc</code>,
 y es solo una versión de vista previa. La API podría cambiar entre estas versiones previas
-al lanzamiento y el lanzamiento final con ese número de versión. Por ejemplo, <code>1.0.0pre1</code>
-podría tener una API final diferente a la de <code>1.0.0</code>.</p>
+al lanzamiento y el lanzamiento final con ese número de versión. Por ejemplo, <code>X.0.0pre1</code>
+podría tener una API diferente a la de <code>X.0.0</code>.</p>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="post-releases">Versiones posteriores al lanzamiento<a href="#post-releases" class="hash-link" aria-label="Enlace directo al Versiones posteriores al lanzamiento" title="Enlace directo al Versiones posteriores al lanzamiento" translate="no">​</a></h2>
 <p>Si hay problemas con el empaquetado de un lanzamiento, se puede publicar una versión
 posterior al lanzamiento para corregirlo. Estas seguirán la forma <code>X.Y.Z.1</code>, donde el

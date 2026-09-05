@@ -15,8 +15,8 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
 <script src="https://unpkg.com/thebelab@0.4.0/lib/index.js" async></script>
 <script src="https://cloud.umami.is/script.js" defer="defer" data-website-id="97f347ac-e7ba-4be3-b26f-ab4b328bdbf2" data-domains="doqumentation.org"></script><link rel="stylesheet" href="/assets/css/styles.e55021e4.css">
-<script src="/assets/js/runtime~main.11c2e55c.js" defer="defer"></script>
-<script src="/assets/js/main.8baccf5c.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.37d58ff9.js" defer="defer"></script>
+<script src="/assets/js/main.bd63ddf0.js" defer="defer"></script>
 <link data-rh-hreflang rel="alternate" hreflang="en" href="https://doqumentation.org/qiskit-addons/cutting/gate_cutting_to_reduce_circuit_depth" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://de.doqumentation.org/qiskit-addons/cutting/gate_cutting_to_reduce_circuit_depth" /><link data-rh-hreflang rel="alternate" hreflang="es" href="https://es.doqumentation.org/qiskit-addons/cutting/gate_cutting_to_reduce_circuit_depth" /><link data-rh-hreflang rel="alternate" hreflang="fr" href="https://fr.doqumentation.org/qiskit-addons/cutting/gate_cutting_to_reduce_circuit_depth" /><link data-rh-hreflang rel="alternate" hreflang="it" href="https://it.doqumentation.org/qiskit-addons/cutting/gate_cutting_to_reduce_circuit_depth" /><link data-rh-hreflang rel="alternate" hreflang="pt" href="https://pt.doqumentation.org/qiskit-addons/cutting/gate_cutting_to_reduce_circuit_depth" /><link data-rh-hreflang rel="alternate" hreflang="ja" href="https://ja.doqumentation.org/qiskit-addons/cutting/gate_cutting_to_reduce_circuit_depth" /><link data-rh-hreflang rel="alternate" hreflang="fil" href="https://tl.doqumentation.org/qiskit-addons/cutting/gate_cutting_to_reduce_circuit_depth" /><link data-rh-hreflang rel="alternate" hreflang="ar" href="https://ar.doqumentation.org/qiskit-addons/cutting/gate_cutting_to_reduce_circuit_depth" /><link data-rh-hreflang rel="alternate" hreflang="he" href="https://he.doqumentation.org/qiskit-addons/cutting/gate_cutting_to_reduce_circuit_depth" /><link data-rh-hreflang rel="alternate" hreflang="ms" href="https://ms.doqumentation.org/qiskit-addons/cutting/gate_cutting_to_reduce_circuit_depth" /><link data-rh-hreflang rel="alternate" hreflang="id" href="https://id.doqumentation.org/qiskit-addons/cutting/gate_cutting_to_reduce_circuit_depth" /><link data-rh-hreflang rel="alternate" hreflang="th" href="https://th.doqumentation.org/qiskit-addons/cutting/gate_cutting_to_reduce_circuit_depth" /><link data-rh-hreflang rel="alternate" hreflang="ko" href="https://ko.doqumentation.org/qiskit-addons/cutting/gate_cutting_to_reduce_circuit_depth" /><link data-rh-hreflang rel="alternate" hreflang="pl" href="https://pl.doqumentation.org/qiskit-addons/cutting/gate_cutting_to_reduce_circuit_depth" /><link data-rh-hreflang rel="alternate" hreflang="ro" href="https://ro.doqumentation.org/qiskit-addons/cutting/gate_cutting_to_reduce_circuit_depth" /><link data-rh-hreflang rel="alternate" hreflang="uk" href="https://uk.doqumentation.org/qiskit-addons/cutting/gate_cutting_to_reduce_circuit_depth" /><link data-rh-hreflang rel="alternate" hreflang="cs" href="https://cs.doqumentation.org/qiskit-addons/cutting/gate_cutting_to_reduce_circuit_depth" /><link data-rh-hreflang rel="alternate" hreflang="swg" href="https://swg.doqumentation.org/qiskit-addons/cutting/gate_cutting_to_reduce_circuit_depth" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://bad.doqumentation.org/qiskit-addons/cutting/gate_cutting_to_reduce_circuit_depth" /><link data-rh-hreflang rel="alternate" hreflang="bar" href="https://bar.doqumentation.org/qiskit-addons/cutting/gate_cutting_to_reduce_circuit_depth" /><link data-rh-hreflang rel="alternate" hreflang="ksh" href="https://ksh.doqumentation.org/qiskit-addons/cutting/gate_cutting_to_reduce_circuit_depth" /><link data-rh-hreflang rel="alternate" hreflang="nds" href="https://nds.doqumentation.org/qiskit-addons/cutting/gate_cutting_to_reduce_circuit_depth" /><link data-rh-hreflang rel="alternate" hreflang="gsw" href="https://gsw.doqumentation.org/qiskit-addons/cutting/gate_cutting_to_reduce_circuit_depth" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://sax.doqumentation.org/qiskit-addons/cutting/gate_cutting_to_reduce_circuit_depth" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://bln.doqumentation.org/qiskit-addons/cutting/gate_cutting_to_reduce_circuit_depth" /><link data-rh-hreflang rel="alternate" hreflang="de-AT" href="https://aut.doqumentation.org/qiskit-addons/cutting/gate_cutting_to_reduce_circuit_depth" /><link data-rh-hreflang rel="alternate" hreflang="x-default" href="https://doqumentation.org/qiskit-addons/cutting/gate_cutting_to_reduce_circuit_depth" /></head>
 <body>
 <svg style="display: none;"><defs>
@@ -28,25 +28,31 @@
 <p>En este tutorial, reduciremos la profundidad de un circuito cortando Gates distantes, evitando los swap gates que de otro modo serían introducidos por el enrutamiento.</p>
 <p>Estos son los pasos que seguiremos en este <a href="https://quantum.cloud.ibm.com/docs/guides/intro-to-patterns" target="_blank" rel="noopener noreferrer" class="">patrón de Qiskit</a>:</p>
 <ul>
-<li class=""><strong>Paso 1: Mapear el problema a circuits cuánticos y operadores</strong>:<!-- -->
+<li class="">
+<p><strong>Paso 1: Mapear el problema a circuits cuánticos y operadores</strong>:</p>
 <ul>
 <li class="">Mapear el hamiltoniano a un circuito cuántico.</li>
 </ul>
 </li>
-<li class=""><strong>Paso 2: Optimizar para el hardware objetivo</strong> [<em>Usa el cutting addon</em>]:<!-- -->
+<li class="">
+<p><strong>Paso 2: Optimizar para el hardware objetivo</strong> [<em>Usa el cutting addon</em>]:</p>
 <ul>
 <li class="">
 <font color="#0F62FE">Cortar el circuito y el observable.</font>
 </li>
-<li class="">Transpilar los subexperimentos para el hardware.</li>
+<li class="">
+<p>Transpilar los subexperimentos para el hardware.</p>
+</li>
 </ul>
 </li>
-<li class=""><strong>Paso 3: Ejecutar en el hardware objetivo</strong>:<!-- -->
+<li class="">
+<p><strong>Paso 3: Ejecutar en el hardware objetivo</strong>:</p>
 <ul>
 <li class="">Ejecutar los subexperimentos obtenidos en el Paso 2 usando una primitiva <code>Sampler</code>.</li>
 </ul>
 </li>
-<li class=""><strong>Paso 4: Post-procesar los resultados</strong> [<em>Usa el cutting addon</em>]:<!-- -->
+<li class="">
+<p><strong>Paso 4: Post-procesar los resultados</strong> [<em>Usa el cutting addon</em>]:</p>
 <ul>
 <li class="">
 <font color="#0F62FE">Combinar los resultados del Paso 3 para reconstruir el valor esperado del observable en cuestión.</font>
