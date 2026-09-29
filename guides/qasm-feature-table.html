@@ -14,8 +14,8 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
 <script src="https://unpkg.com/thebelab@0.4.0/lib/index.js" async></script>
 <script src="https://cloud.umami.is/script.js" defer="defer" data-website-id="97f347ac-e7ba-4be3-b26f-ab4b328bdbf2" data-domains="doqumentation.org"></script><link rel="stylesheet" href="/assets/css/styles.d115d309.css">
-<script src="/assets/js/runtime~main.20f227f7.js" defer="defer"></script>
-<script src="/assets/js/main.9e77083f.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.c94b8079.js" defer="defer"></script>
+<script src="/assets/js/main.8e4ab705.js" defer="defer"></script>
 <link data-rh-hreflang rel="alternate" hreflang="en" href="https://doqumentation.org/guides/qasm-feature-table" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://de.doqumentation.org/guides/qasm-feature-table" /><link data-rh-hreflang rel="alternate" hreflang="es" href="https://es.doqumentation.org/guides/qasm-feature-table" /><link data-rh-hreflang rel="alternate" hreflang="fr" href="https://fr.doqumentation.org/guides/qasm-feature-table" /><link data-rh-hreflang rel="alternate" hreflang="it" href="https://it.doqumentation.org/guides/qasm-feature-table" /><link data-rh-hreflang rel="alternate" hreflang="pt" href="https://pt.doqumentation.org/guides/qasm-feature-table" /><link data-rh-hreflang rel="alternate" hreflang="ja" href="https://ja.doqumentation.org/guides/qasm-feature-table" /><link data-rh-hreflang rel="alternate" hreflang="fil" href="https://tl.doqumentation.org/guides/qasm-feature-table" /><link data-rh-hreflang rel="alternate" hreflang="ar" href="https://ar.doqumentation.org/guides/qasm-feature-table" /><link data-rh-hreflang rel="alternate" hreflang="he" href="https://he.doqumentation.org/guides/qasm-feature-table" /><link data-rh-hreflang rel="alternate" hreflang="ms" href="https://ms.doqumentation.org/guides/qasm-feature-table" /><link data-rh-hreflang rel="alternate" hreflang="id" href="https://id.doqumentation.org/guides/qasm-feature-table" /><link data-rh-hreflang rel="alternate" hreflang="th" href="https://th.doqumentation.org/guides/qasm-feature-table" /><link data-rh-hreflang rel="alternate" hreflang="ko" href="https://ko.doqumentation.org/guides/qasm-feature-table" /><link data-rh-hreflang rel="alternate" hreflang="pl" href="https://pl.doqumentation.org/guides/qasm-feature-table" /><link data-rh-hreflang rel="alternate" hreflang="ro" href="https://ro.doqumentation.org/guides/qasm-feature-table" /><link data-rh-hreflang rel="alternate" hreflang="uk" href="https://uk.doqumentation.org/guides/qasm-feature-table" /><link data-rh-hreflang rel="alternate" hreflang="cs" href="https://cs.doqumentation.org/guides/qasm-feature-table" /><link data-rh-hreflang rel="alternate" hreflang="x-default" href="https://doqumentation.org/guides/qasm-feature-table" /></head>
 <body>
 <svg style="display: none;"><defs>
@@ -58,7 +58,7 @@ Esto incluye características que no pueden ser cargadas por Qiskit SDK desde Op
 <ol>
 <li class="">Estas características de los programas OpenQASM 3 no tienen impacto en la ejecución y Qiskit las elimina
 al analizar los archivos. Los archivos que las utilizan pueden enviarse, pero no tendrán
-ningún efecto. En el caso de los archivos <code>include</code>, <code>stdgates.inc</code> está actualmente soportado como entrada en Qiskit,
+ningún efecto. En el caso de los archivos <code>include</code>, Qiskit admite actualmente <code>stdgates.inc</code> como entrada,
 y la ejecución en el backend siempre requiere que los circuitos hayan sido compilados para la Arquitectura del Conjunto de Instrucciones (ISA) del backend, donde
 los archivos <code>include</code> son irrelevantes.</li>
 </ol>
@@ -66,8 +66,8 @@ los archivos <code>include</code> son irrelevantes.</li>
 <ol start="2">
 <li class="">Qiskit SDK admite el análisis y la exportación de archivos OpenQASM 3 con cualquier declaración de <code>qubit</code>. Para
 la ejecución en hardware, solo son válidos los circuitos definidos en términos de qubits de hardware (por ejemplo, <code>$0</code>).
-Qiskit SDK genera automáticamente OpenQASM 3 en términos de los identificadores de qubits de hardware soportados
-si el circuito fue transpilado para un backend con información de diseño.</li>
+Qiskit SDK genera automáticamente OpenQASM 3 en términos de los identificadores de qubits de hardware admitidos
+si el circuito fue transpilado para un backend con información de layout (disposición de qubits).</li>
 </ol>
 <span id="3"></span>
 <ol start="3">
@@ -107,8 +107,8 @@ archivos OpenQASM 3. El hardware tiene soporte limitado para duraciones que incl
 definiciones personalizadas de <code>gate</code> y los constructos de alto nivel como los modificadores de puertas (como <code>inv @</code>) sean
 válidos para la ejecución directa en hardware, pero el proceso de <code>transpile</code> los resuelve
 en circuitos ISA válidos. Qiskit SDK (a partir de julio de 2025, con <code>qiskit-qasm3-import</code>
-v0.6.0) evaluará de forma anticipada los modificadores de puertas durante el análisis, por lo que estos no quedarán
-evidentes en el <code>QuantumCircuit</code> resultante, potencialmente con un costo en tiempo de ejecución.</li>
+v0.6.0) evaluará de forma anticipada los modificadores de puertas durante el análisis, por lo que no se verán
+reflejados en el <code>QuantumCircuit</code> resultante, potencialmente con un costo en tiempo de ejecución.</li>
 </ol>
 <span id="8"></span>
 <ol start="8">
@@ -116,13 +116,13 @@ evidentes en el <code>QuantumCircuit</code> resultante, potencialmente con un co
 y <code>break</code> pueden ser representadas técnicamente por Qiskit, pero no tienen buen soporte ni siquiera
 dentro de Qiskit SDK. Los bucles <code>for</code> en Qiskit v2.1.0
 no tienen buen soporte. El flujo de control anidado
-(como un <code>if</code> dentro de otro <code>if</code>, o una instrucción <code>else if</code>) no es elegible para la ejecución
+(como un <code>if</code> dentro de otro <code>if</code>, o una instrucción <code>else if</code>) no se puede ejecutar
 en hardware.</li>
 </ol>
 <span id="9"></span>
 <ol start="9">
-<li class="">Qiskit SDK admite declarar cualquier tipo clásico soportado como variable <code>input</code> en el circuito.
-Actualmente, estas variables no son elegibles para la ejecución en hardware, y no pueden ser cargadas por
+<li class="">Qiskit SDK admite declarar cualquier tipo clásico admitido como variable <code>input</code> en el circuito.
+Actualmente, estas variables no se pueden ejecutar en hardware, y no pueden ser cargadas por
 el importador OpenQASM 3 de Qiskit. Los objetos <code>Parameter</code> no vinculados presentes en el <code>QuantumCircuit</code> se exportan como variables <code>input float[64]</code>. Ciertas opciones de configuración en tiempo de ejecución pueden permitir la ejecución de dichos circuitos en algunos backends.</li>
 </ol>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="next-steps">Próximos pasos<a href="#next-steps" class="hash-link" aria-label="Enlace directo al Próximos pasos" title="Enlace directo al Próximos pasos" translate="no">​</a></h2>
