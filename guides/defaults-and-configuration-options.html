@@ -14,8 +14,8 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
 <script src="https://unpkg.com/thebelab@0.4.0/lib/index.js" async></script>
 <script src="https://cloud.umami.is/script.js" defer="defer" data-website-id="97f347ac-e7ba-4be3-b26f-ab4b328bdbf2" data-domains="doqumentation.org"></script><link rel="stylesheet" href="/assets/css/styles.d115d309.css">
-<script src="/assets/js/runtime~main.9630bc54.js" defer="defer"></script>
-<script src="/assets/js/main.d3048e79.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.20f227f7.js" defer="defer"></script>
+<script src="/assets/js/main.421c3abf.js" defer="defer"></script>
 <link data-rh-hreflang rel="alternate" hreflang="en" href="https://doqumentation.org/guides/defaults-and-configuration-options" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://de.doqumentation.org/guides/defaults-and-configuration-options" /><link data-rh-hreflang rel="alternate" hreflang="es" href="https://es.doqumentation.org/guides/defaults-and-configuration-options" /><link data-rh-hreflang rel="alternate" hreflang="fr" href="https://fr.doqumentation.org/guides/defaults-and-configuration-options" /><link data-rh-hreflang rel="alternate" hreflang="it" href="https://it.doqumentation.org/guides/defaults-and-configuration-options" /><link data-rh-hreflang rel="alternate" hreflang="pt" href="https://pt.doqumentation.org/guides/defaults-and-configuration-options" /><link data-rh-hreflang rel="alternate" hreflang="ja" href="https://ja.doqumentation.org/guides/defaults-and-configuration-options" /><link data-rh-hreflang rel="alternate" hreflang="fil" href="https://tl.doqumentation.org/guides/defaults-and-configuration-options" /><link data-rh-hreflang rel="alternate" hreflang="ar" href="https://ar.doqumentation.org/guides/defaults-and-configuration-options" /><link data-rh-hreflang rel="alternate" hreflang="he" href="https://he.doqumentation.org/guides/defaults-and-configuration-options" /><link data-rh-hreflang rel="alternate" hreflang="ms" href="https://ms.doqumentation.org/guides/defaults-and-configuration-options" /><link data-rh-hreflang rel="alternate" hreflang="id" href="https://id.doqumentation.org/guides/defaults-and-configuration-options" /><link data-rh-hreflang rel="alternate" hreflang="th" href="https://th.doqumentation.org/guides/defaults-and-configuration-options" /><link data-rh-hreflang rel="alternate" hreflang="ko" href="https://ko.doqumentation.org/guides/defaults-and-configuration-options" /><link data-rh-hreflang rel="alternate" hreflang="pl" href="https://pl.doqumentation.org/guides/defaults-and-configuration-options" /><link data-rh-hreflang rel="alternate" hreflang="ro" href="https://ro.doqumentation.org/guides/defaults-and-configuration-options" /><link data-rh-hreflang rel="alternate" hreflang="uk" href="https://uk.doqumentation.org/guides/defaults-and-configuration-options" /><link data-rh-hreflang rel="alternate" hreflang="cs" href="https://cs.doqumentation.org/guides/defaults-and-configuration-options" /><link data-rh-hreflang rel="alternate" hreflang="x-default" href="https://doqumentation.org/guides/defaults-and-configuration-options" /></head>
 <body>
 <svg style="display: none;"><defs>
@@ -63,7 +63,7 @@ Recomendamos usar estas versiones o versiones más recientes.</p><div class="lan
 <p><code>basis_gates</code> (List[str] | None) - Lista de nombres de puertas base a las que desenrollar. Por ejemplo [&#x27;u1&#x27;, &#x27;u2&#x27;, &#x27;u3&#x27;, &#x27;cx&#x27;]. Si es <code>None</code>, no se desenrolla.</p>
 </li>
 <li class="">
-<p><code>coupling_map</code> (CouplingMap | List[List[int]]) - Mapa de acoplamiento dirigido (posiblemente personalizado) al que apuntar en el mapeo. Si el mapa de acoplamiento es simétrico, es necesario especificar ambas direcciones. Se admiten los siguientes formatos:</p>
+<p><code>coupling_map</code> (CouplingMap | List[List[int]]) - Mapa de acoplamiento dirigido (posiblemente personalizado) que se usa como destino del mapeo. Si el mapa de acoplamiento es simétrico, es necesario especificar ambas direcciones. Se admiten los siguientes formatos:</p>
 <ul>
 <li class="">
 <p>Instancia de CouplingMap</p>
@@ -105,7 +105,7 @@ Recomendamos usar estas versiones o versiones más recientes.</p><div class="lan
 <li class=""><code>translation_method</code> (str) - Nombre de la pasada de traducción (<code>default</code>, <code>synthesis</code>, <code>translator</code>, <code>ibm_backend</code>, <code>ibm_dynamic_circuits</code>, <code>ibm_fractional</code>). También puede ser el nombre del plugin externo a usar para la etapa de traducción. Puedes ver una lista de plugins instalados ejecutando <code>list_stage_plugins()</code> con <code>translation</code> como argumento <code>stage_name</code>. El valor predeterminado es <code>translator</code>.</li>
 </ul></div></details><details class="dq-accordion-item" style="margin:0.5rem 0;padding:0.5rem 1rem;border:1px solid var(--ifm-color-emphasis-300);border-radius:4px"><summary style="cursor:pointer;font-weight:600"><strong>Etapa de optimización</strong></summary><div style="margin-top:0.5rem"><ul>
 <li class="">
-<p><code>approximation_degree</code> (float, en el rango 0-1 | None) - Dial heurístico usado para la aproximación de circuitos (1.0 = sin aproximación, 0.0 = aproximación máxima). El valor predeterminado es 1.0. Especificar <code>None</code> establece el grado de aproximación a la tasa de error reportada. Consulta la <a class="" href="/guides/common-parameters#approx-degree">sección de grado de aproximación</a> para más detalles.</p>
+<p><code>approximation_degree</code> (float, en el rango 0-1 | None) - Parámetro heurístico que controla la aproximación del circuito (1.0 = sin aproximación, 0.0 = aproximación máxima). El valor predeterminado es 1.0. Si especificas <code>None</code>, el grado de aproximación se fija en la tasa de error reportada. Consulta la <a class="" href="/guides/common-parameters#approx-degree">sección de grado de aproximación</a> para más detalles.</p>
 </li>
 <li class="">
 <p><code>optimization_method</code> (str) - El nombre del plugin a usar para la etapa de optimización. Por defecto no se usa un plugin externo. Puedes ver una lista de plugins instalados ejecutando <code>list_stage_plugins()</code> con <code>optimization</code> como argumento <code>stage_name</code>.</p>
@@ -115,7 +115,7 @@ Recomendamos usar estas versiones o versiones más recientes.</p><div class="lan
 <p><code>scheduling_method</code> (str) - Nombre de la pasada de planificación. También puede ser el nombre del plugin externo a usar para la etapa de planificación. Puedes ver una lista de plugins instalados ejecutando <code>list_stage_plugins()</code> con <code>scheduling</code> como argumento <code>stage_name</code>.</p>
 <ul>
 <li class="">
-<p>&#x27;as_soon_as_possible&#x27;: Planifica las instrucciones de forma ávida, lo más pronto posible en un recurso de qubit (alias: <code>asap</code>).</p>
+<p>&#x27;as_soon_as_possible&#x27;: Planifica las instrucciones de forma voraz, lo antes posible en un recurso de qubit (alias: <code>asap</code>).</p>
 </li>
 <li class="">
 <p>&#x27;as_late_as_possible&#x27;: Planifica las instrucciones tarde, es decir, manteniendo los qubits en el estado fundamental cuando sea posible (alias: <code>alap</code>). Este es el valor predeterminado.</p>
