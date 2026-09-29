@@ -14,8 +14,8 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
 <script src="https://unpkg.com/thebelab@0.4.0/lib/index.js" async></script>
 <script src="https://cloud.umami.is/script.js" defer="defer" data-website-id="97f347ac-e7ba-4be3-b26f-ab4b328bdbf2" data-domains="doqumentation.org"></script><link rel="stylesheet" href="/assets/css/styles.d115d309.css">
-<script src="/assets/js/runtime~main.97909755.js" defer="defer"></script>
-<script src="/assets/js/main.dccace95.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.8c29b8b2.js" defer="defer"></script>
+<script src="/assets/js/main.2f5ecd36.js" defer="defer"></script>
 <link data-rh-hreflang rel="alternate" hreflang="en" href="https://doqumentation.org/guides/choose-execution-mode" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://de.doqumentation.org/guides/choose-execution-mode" /><link data-rh-hreflang rel="alternate" hreflang="es" href="https://es.doqumentation.org/guides/choose-execution-mode" /><link data-rh-hreflang rel="alternate" hreflang="fr" href="https://fr.doqumentation.org/guides/choose-execution-mode" /><link data-rh-hreflang rel="alternate" hreflang="it" href="https://it.doqumentation.org/guides/choose-execution-mode" /><link data-rh-hreflang rel="alternate" hreflang="pt" href="https://pt.doqumentation.org/guides/choose-execution-mode" /><link data-rh-hreflang rel="alternate" hreflang="ja" href="https://ja.doqumentation.org/guides/choose-execution-mode" /><link data-rh-hreflang rel="alternate" hreflang="fil" href="https://tl.doqumentation.org/guides/choose-execution-mode" /><link data-rh-hreflang rel="alternate" hreflang="ar" href="https://ar.doqumentation.org/guides/choose-execution-mode" /><link data-rh-hreflang rel="alternate" hreflang="he" href="https://he.doqumentation.org/guides/choose-execution-mode" /><link data-rh-hreflang rel="alternate" hreflang="ms" href="https://ms.doqumentation.org/guides/choose-execution-mode" /><link data-rh-hreflang rel="alternate" hreflang="id" href="https://id.doqumentation.org/guides/choose-execution-mode" /><link data-rh-hreflang rel="alternate" hreflang="th" href="https://th.doqumentation.org/guides/choose-execution-mode" /><link data-rh-hreflang rel="alternate" hreflang="ko" href="https://ko.doqumentation.org/guides/choose-execution-mode" /><link data-rh-hreflang rel="alternate" hreflang="pl" href="https://pl.doqumentation.org/guides/choose-execution-mode" /><link data-rh-hreflang rel="alternate" hreflang="ro" href="https://ro.doqumentation.org/guides/choose-execution-mode" /><link data-rh-hreflang rel="alternate" hreflang="uk" href="https://uk.doqumentation.org/guides/choose-execution-mode" /><link data-rh-hreflang rel="alternate" hreflang="cs" href="https://cs.doqumentation.org/guides/choose-execution-mode" /><link data-rh-hreflang rel="alternate" hreflang="x-default" href="https://doqumentation.org/guides/choose-execution-mode" /></head>
 <body>
 <svg style="display: none;"><defs>
@@ -96,7 +96,7 @@
 <p>Para asegurar el uso más eficiente de los modos de ejecución, se recomiendan las siguientes prácticas:</p>
 <ul>
 <li class="">
-<p>Hay una sobrecarga (overhead) fija asociada a la ejecución de un trabajo. En general, si cada uno de tus trabajos usa menos de un minuto de <em>tiempo de QPU</em>, considera combinar varios en un trabajo más grande (esto aplica a todos los modos de ejecución). &quot;Tiempo de QPU&quot; refiere al tiempo que gasta el complejo de la QPU procesando tu trabajo.</p>
+<p>Hay una sobrecarga (overhead) fija asociada a la ejecución de un trabajo. En general, si cada uno de tus trabajos usa menos de un minuto de <em>tiempo de QPU</em>, considera combinar varios en un trabajo más grande (esto aplica a todos los modos de ejecución). &quot;Tiempo de QPU&quot; se refiere al tiempo que tarda el complejo de la QPU en procesar tu trabajo.</p>
 </li>
 <li class="">
 <p>Si cada uno de tus trabajos consume más de un minuto de tiempo de QPU, o si combinar trabajos no es práctico, aún puedes ejecutar múltiples trabajos en paralelo. Cada trabajo pasa por procesamiento tanto clásico como cuántico. Mientras que una QPU solo puede procesar un trabajo a la vez, se pueden procesar hasta cinco trabajos clásicos en paralelo. Puedes aprovechar esto enviando múltiples trabajos en modo de ejecución por <a class="" href="/guides/run-jobs-batch#partition">lotes</a> o por <a class="" href="/guides/run-jobs-session#two-vqe">sesión</a>.</p>
@@ -120,7 +120,7 @@
 <p>Ajusta los parámetros según la salida de (3), luego vuelve al paso (2).</p>
 </li>
 </ol>
-<p>En este caso, si usaras el modo de trabajo (job) o lote (batch), cada trabajo generado por el paso (2) tendría que volver a entrar a la cola. Esto incrementa drásticamente la longitud del experimento (tiempo real) debido al tiempo en la cola. También podría tardar más en converger debido a la desviación (drift) del dispositivo. Es decir, se supone que cada iteración te dará un mejor resultado, pero la desviación del dispositivo podría empeorar los resultados posteriores.</p>
+<p>En este caso, si usaras el modo de trabajo (job) o lote (batch), cada trabajo generado por el paso (2) tendría que volver a entrar a la cola. Esto incrementa drásticamente la duración del experimento (tiempo real) debido al tiempo en la cola. También podría tardar más en converger debido a la desviación (drift) del dispositivo. Es decir, se supone que cada iteración te dará un mejor resultado, pero la desviación del dispositivo podría empeorar los resultados posteriores.</p>
 <p>Además, si utilizas <a class="" href="/guides/error-mitigation-and-suppression-techniques#pea">PEA</a> o <a class="" href="/guides/error-mitigation-and-suppression-techniques#pec">PEC</a>, puedes <a class="" href="/guides/noise-learning">aprender el modelo de ruido</a> una vez y aplicarlo a los trabajos posteriores cuando se ejecute en una sesión dedicada. Normalmente, esto no funciona con el modo por lotes o por trabajos debido a que el modelo de ruido podría volverse obsoleto (stale) para cuando el siguiente trabajo salga de la cola de espera.</p>
 <h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="compare-error-mitigation-settings">Comparar ajustes de mitigación de errores<a href="#compare-error-mitigation-settings" class="hash-link" aria-label="Enlace directo al Comparar ajustes de mitigación de errores" title="Enlace directo al Comparar ajustes de mitigación de errores" translate="no">​</a></h3>
 <p>Para comparar los efectos de los métodos de mitigación de errores disponibles, podrías seguir este flujo:</p>
@@ -129,10 +129,10 @@
 <p>Construye un circuito y un observable.</p>
 </li>
 <li class="">
-<p>Envía trabajos de primitivas que utilicen diferentes combinaciones de configuraciones (settings) de mitigación de errores.</p>
+<p>Envía trabajos de primitivas que utilicen diferentes combinaciones de ajustes de mitigación de errores.</p>
 </li>
 <li class="">
-<p>Graficar los resultados para observar los efectos de los diferentes ajustes prestablecidos.</p>
+<p>Grafica los resultados para observar los efectos de los distintos ajustes.</p>
 </li>
 </ol>
 <p>En este caso, todos los trabajos (que están relacionados pero son independientes) están disponibles desde el inicio. Si usas el modo por lotes, se programan de manera colectiva, así que solo tienes que esperar a que pasen por la cola una sola vez. Adicionalmente, debido a que la meta es comparar los efectos de varios métodos de mitigación de errores, es beneficioso que se ejecuten lo más cerca posible entre sí. Por lo tanto, el modo por lotes sería una buena elección. <em>Podrías</em> ejecutar estos trabajos en una sesión, pero debido a que las sesiones son generalmente más costosas, se recomienda que uses el modo por lotes siempre que no necesites la funcionalidad adicional que proporcionan las sesiones.</p>
