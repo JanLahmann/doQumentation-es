@@ -14,8 +14,8 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
 <script src="https://unpkg.com/thebelab@0.4.0/lib/index.js" async></script>
 <script src="https://cloud.umami.is/script.js" defer="defer" data-website-id="97f347ac-e7ba-4be3-b26f-ab4b328bdbf2" data-domains="doqumentation.org"></script><link rel="stylesheet" href="/assets/css/styles.d115d309.css">
-<script src="/assets/js/runtime~main.7e6c5c8f.js" defer="defer"></script>
-<script src="/assets/js/main.575beea1.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.e4b2ebec.js" defer="defer"></script>
+<script src="/assets/js/main.a8c4327a.js" defer="defer"></script>
 <link data-rh-hreflang rel="alternate" hreflang="en" href="https://doqumentation.org/guides/estimate-job-run-time" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://de.doqumentation.org/guides/estimate-job-run-time" /><link data-rh-hreflang rel="alternate" hreflang="es" href="https://es.doqumentation.org/guides/estimate-job-run-time" /><link data-rh-hreflang rel="alternate" hreflang="fr" href="https://fr.doqumentation.org/guides/estimate-job-run-time" /><link data-rh-hreflang rel="alternate" hreflang="it" href="https://it.doqumentation.org/guides/estimate-job-run-time" /><link data-rh-hreflang rel="alternate" hreflang="pt" href="https://pt.doqumentation.org/guides/estimate-job-run-time" /><link data-rh-hreflang rel="alternate" hreflang="ja" href="https://ja.doqumentation.org/guides/estimate-job-run-time" /><link data-rh-hreflang rel="alternate" hreflang="fil" href="https://tl.doqumentation.org/guides/estimate-job-run-time" /><link data-rh-hreflang rel="alternate" hreflang="ar" href="https://ar.doqumentation.org/guides/estimate-job-run-time" /><link data-rh-hreflang rel="alternate" hreflang="he" href="https://he.doqumentation.org/guides/estimate-job-run-time" /><link data-rh-hreflang rel="alternate" hreflang="ms" href="https://ms.doqumentation.org/guides/estimate-job-run-time" /><link data-rh-hreflang rel="alternate" hreflang="id" href="https://id.doqumentation.org/guides/estimate-job-run-time" /><link data-rh-hreflang rel="alternate" hreflang="th" href="https://th.doqumentation.org/guides/estimate-job-run-time" /><link data-rh-hreflang rel="alternate" hreflang="ko" href="https://ko.doqumentation.org/guides/estimate-job-run-time" /><link data-rh-hreflang rel="alternate" hreflang="pl" href="https://pl.doqumentation.org/guides/estimate-job-run-time" /><link data-rh-hreflang rel="alternate" hreflang="ro" href="https://ro.doqumentation.org/guides/estimate-job-run-time" /><link data-rh-hreflang rel="alternate" hreflang="uk" href="https://uk.doqumentation.org/guides/estimate-job-run-time" /><link data-rh-hreflang rel="alternate" hreflang="cs" href="https://cs.doqumentation.org/guides/estimate-job-run-time" /><link data-rh-hreflang rel="alternate" hreflang="x-default" href="https://doqumentation.org/guides/estimate-job-run-time" /></head>
 <body>
 <svg style="display: none;"><defs>
@@ -42,10 +42,10 @@
 <p>Cuando un trabajo falla o se cancela, el uso reportado es el siguiente:</p>
 <ul>
 <li class="">
-<p>Modo trabajo o lote: Si el fallo o la cancelación se debió a un error del sistema, el uso reportado es cero. Para los trabajos que fallaron por un error del usuario o cuando el usuario canceló un trabajo, el uso reportado es cualquier consumo que haya ocurrido hasta ese momento, incluida la sobrecarga incurrida para preparar la QPU para ejecutar el trabajo.</p>
+<p>Job mode o batch mode: Si el fallo o la cancelación se debió a un error del sistema, el uso reportado es cero. Para los trabajos que fallaron por un error del usuario o cuando el usuario canceló un trabajo, el uso reportado es cualquier consumo que haya ocurrido hasta ese momento, incluida la sobrecarga incurrida para preparar la QPU para ejecutar el trabajo.</p>
 </li>
 <li class="">
-<p>Modo sesión: El uso reportado es el tiempo de reloj que la sesión estuvo activa, independientemente del número de trabajos que fallen o se cancelen.</p>
+<p>Session mode: El uso reportado es el tiempo de reloj que la sesión estuvo activa, independientemente del número de trabajos que fallen o se cancelen.</p>
 </li>
 </ul>
 <span id="view-usage"></span>
@@ -53,7 +53,7 @@
 <p>Una vez que una carga de trabajo ha finalizado, hay varias formas de ver su uso real:</p>
 <ul>
 <li class="">
-<p>En <code>qiskit-ibm-runtime</code> v0.30 o posterior, ejecuta <a href="https://docs.quantum.ibm.com/api/qiskit-ibm-runtime/runtime-job-v2#usage" target="_blank" rel="noopener noreferrer" class=""><code>job.usage()</code></a> para un solo trabajo, o <a href="https://docs.quantum.ibm.com/api/qiskit-ibm-runtime/batch#usage" target="_blank" rel="noopener noreferrer" class=""><code>batch.usage()</code></a> o <a href="https://docs.quantum.ibm.com/api/qiskit-ibm-runtime/session#usage" target="_blank" rel="noopener noreferrer" class=""><code>session.usage()</code></a> cuando uses el modo batch o session. Si usas una versión anterior de <code>qiskit-ibm-runtime</code> (&gt;= 0.23 y &lt; 0.30), el uso aún puede encontrarse en <code>session.details()[&quot;usage_time&quot;]</code> y <code>batch.details()[&quot;usage_time&quot;]</code>.</p>
+<p>En <code>qiskit-ibm-runtime</code> v0.30 o posterior, ejecuta <a href="https://docs.quantum.ibm.com/api/qiskit-ibm-runtime/runtime-job-v2#usage" target="_blank" rel="noopener noreferrer" class=""><code>job.usage()</code></a> para un solo trabajo, o <a href="https://docs.quantum.ibm.com/api/qiskit-ibm-runtime/batch#usage" target="_blank" rel="noopener noreferrer" class=""><code>batch.usage()</code></a> o <a href="https://docs.quantum.ibm.com/api/qiskit-ibm-runtime/session#usage" target="_blank" rel="noopener noreferrer" class=""><code>session.usage()</code></a> cuando uses batch mode o session mode. Si usas una versión anterior de <code>qiskit-ibm-runtime</code> (&gt;= 0.23 y &lt; 0.30), el uso aún puede encontrarse en <code>session.details()[&quot;usage_time&quot;]</code> y <code>batch.details()[&quot;usage_time&quot;]</code>.</p>
 </li>
 <li class="">
 <p>Usa <a href="https://docs.quantum.ibm.com/api/qiskit-runtime-rest/tags/sessions#tags__sessions__operations__get_session" target="_blank" rel="noopener noreferrer" class=""><code>GET /sessions/{id}</code></a> para ver el uso de un lote o sesión específicos (el endpoint es el mismo para ambos modos de ejecución).</p>
